@@ -16,7 +16,7 @@
   <!--Stylesheet-->
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <title>Emailz</title>
+  <title>Emails gen</title>
 </head>
 
 <body>
@@ -31,7 +31,8 @@
           @click="generateEmailBtn">Genera</button>
       </div>
       <div>
-        <ul>
+        <!-- BONUS: condition to print together the emails once generated -->
+        <ul v-if="randomEmail.length >= 10">
           <li v-for="email in randomEmail">{{email}}</li>
         </ul>
       </div>
